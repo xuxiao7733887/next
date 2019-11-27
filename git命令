@@ -1,0 +1,20 @@
+ mkdir learngit
+ cd learngit
+ git init
+ git add readme.txt
+ git commit -m "wrote a readme file"
+ git status
+ git diff readme.txt 
+ git log
+ git reset --hard HEAD^        //回退到上一个版本
+ git reset --hard 1094a
+ git reflog
+ git diff HEAD -- readme.txt    //查看工作区和版本库里面最新版本的区别
+ git checkout -- readme.txt      //丢弃工作区的修改
+ git reset HEAD readme.txt       //把暂存区的修改撤销掉（unstage），重新放回工作区
+ git rm test.txt     //从版本库中删除该文件
+ git checkout -- test.txt      //删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本
+ ssh-keygen -t rsa -C "youremail@example.com"   //创建SSH Key
+  git remote add origin git@github.com:michaelliao/learngit.git
+  git push -u origin master   //把本地库的所有内容推送到远程库上
+  git clone git@github.com:michaelliao/gitskills.git     //克隆一个本地库
